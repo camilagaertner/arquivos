@@ -1,0 +1,26 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Verifica se a subquery retornou algum resultado
+Tem melhor desempenho que o uso do IN
+É uma função
+Argumento é uma consulta
+Retorna 0 ou 1
+
+Usado geralmente em cláusulas WHERE
+
+Como retorna 0 ou 1, pode ser usado em outras cláusulas
+
+
+
+SELECT m.descricao marca, t.descricao AS tipo,
+      tam.descricao AS tamanho, c.descricao cor
+   FROM Catalogo cat
+   JOIN Marca m on cat.id_marca = m.id
+   JOIN Tipo AS t on cat.id_tipo = t.id
+   JOIN Tamanho tam on cat.id_tamanho = tam.id
+   JOIN Cor c on cat.id_cor = c.id
+WHERE EXISTS
+     (SELECT 1
+       FROM Catalogo incat
+       WHERE preco > 600 AND incat.id_marca = cat.id_marca);

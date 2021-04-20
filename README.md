@@ -1,6 +1,10 @@
 Tabelas usadas no exemplo de cada comando SQL:
 
 
+
+
+CREATE DATABASE catalogo;
+
 ---------------TABELA MARCA----------
 CREATE TABLE Marca (
 	id INT NOT NULL AUTO_INCREMENT,

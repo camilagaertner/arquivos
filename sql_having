@@ -1,0 +1,25 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Filtrar dados de acordo o retorno das  funções de agregações
+
+Uso
+Similar à cláusula WHERE
+Permite operadores lógicos como AND, OR, >, <, >=, <=, =, <>, BETWEEN, IN
+
+Restrições
+Adicionado após o GROUP BY
+
+
+SELECT m.descricao marca, t.descricao AS tipo,
+     AVG(preco) AS media_preco,
+     SUM(preco) AS soma_preco,
+     AVG(estoque) AS media_estoque,
+     SUM(estoque) AS soma_estoque
+  FROM Catalogo cat
+  JOIN Marca m on cat.id_marca = m.id
+  JOIN Tipo AS t on cat.id_tipo = t.id
+  JOIN Tamanho tam on cat.id_tamanho = tam.id
+  JOIN Cor c on cat.id_cor = c.id
+GROUP BY marca, tipo
+HAVING media_preco > 600 AND media_estoque > 16;

@@ -1,10 +1,7 @@
 ------Lista de Comandos SQL---------
 
-Para que serve?
-Verifica se a subquery retornou algum resultado
-Tem melhor desempenho que o uso do IN
-É uma função
-Argumento é uma consulta
+O EXISTS é uma cláusula SQL que testa quando há um ou mais resultados em uma SUBQUERY e retorna o valor TRUE, permitindo filtrar colunas dentro de uma subconsulta.
+
 Retorna 0 ou 1
 
 Usado geralmente em cláusulas WHERE

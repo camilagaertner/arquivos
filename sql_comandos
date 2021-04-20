@@ -1,0 +1,26 @@
+------Lista de Comandos SQL---------
+
+---------Consulta linhas em uma relação----------
+
+SELECT
+Lista de colunas ou expressões que devem ser retornadas
+* equivale a todas colunas
+DISTINCT filtra os resultados duplicados
+
+FROM
+Nome da tabela que está sendo selecionada
+
+WHERE
+Mapeia as linhas selecionadas de acordo com as características dos atributos
+Lógica
+IN, BETWEEN, <, <=, >, >=, =, <>, AND, OR, LIKE
+
+ORDER
+Ordena as linhas em ordem crescente (ASC, padrão) ou decrescente (DESC) pelas colunas selecionadas
+
+--------exemplo-----------
+SELECT Tipo, Marca, Cor, Preço
+FROM Catálogo
+WHERE
+      Tamanho NOT IN (‘P’,’M’)
+

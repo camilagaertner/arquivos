@@ -1,0 +1,50 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Retornar um valor conforme a condição
+Pode ser usado no SELECT ou WHERE
+Pode ser encadeado (isto é adicionar um case dentro de um case, ...)
+
+
+
+Uso
+CASE 
+	WHEN <condição lógica> THEN
+		<resultado de retorno>
+	WHEN <condição lógica> THEN 
+                		<resultado de retorno>
+	WHEN <condição lógica> THEN 
+                		<resultado de retorno>
+	ELSE
+                 	<resultado de retorno>
+END
+
+
+
+
+Uso
+É necessário ao menos um WHEN <condição lógica> THEN
+ELSE é opcional
+END é obrigatório
+
+Restrições
+Use com sabedoria
+⚠️ Lembre-se: A regra de negócio deve estar na aplicação!
+
+----------------------------------------------------------------
+SELECT m.descricao marca, t.descricao AS tipo,
+     tam.descricao AS tamanho, c.descricao cor,
+    estoque,
+   CASE
+       WHEN estoque < 15 THEN
+           'Baixo'
+       WHEN estoque BETWEEN 15 AND 30 THEN
+           'Médio'
+       ELSE
+           'Alto'
+   END AS status
+  FROM Catalogo cat
+  JOIN Marca m on cat.id_marca = m.id
+  JOIN Tipo AS t on cat.id_tipo = t.id
+  JOIN Tamanho tam on cat.id_tamanho = tam.id
+  JOIN Cor c on cat.id_cor = c.id;

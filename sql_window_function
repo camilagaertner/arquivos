@@ -1,0 +1,26 @@
+------Lista de Comandos SQL---------
+
+
+Para que serve?
+Adicionar colunas de agregação para parte dos dados da consulta (janela)
+É possível retornar todos dados da tabela 
+colunas de agregação são de apenas parte da seleção (janela)
+Menos complexo que utilizar uma subquery para calcular a agregação
+
+Uso
+<Função de agregação>(<coluna>) OVER (PARTITION BY <lista de colunas da janela>) 
+AVG(preco) OVER (PARTITION BY id_marca, id_tipo)
+
+💡A lista de colunas de partição seria a mesma utilizada pelo GROUP BY
+
+
+
+SELECT m.descricao marca, t.descricao AS tipo,
+     tam.descricao AS tamanho, c.descricao cor,
+     AVG(preco) OVER(PARTITION BY cat.id_marca, cat.id_tipo) AS media_preco_por_tipo_e_marca,
+     AVG(estoque) OVER(PARTITION BY cat.id_marca, cat.id_tipo) AS media_estoque_por_tipo_e_marca
+  FROM Catalogo cat
+  JOIN Marca m on cat.id_marca = m.id
+  JOIN Tipo AS t on cat.id_tipo = t.id
+  JOIN Tamanho tam on cat.id_tamanho = tam.id
+  JOIN Cor c on cat.id_cor = c.id;

@@ -1,0 +1,18 @@
+------Lista de Comandos SQL---------
+
+---------Insere linhas em uma relação----------
+
+
+INSERT
+
+INSERT INTO
+Define a relação e colunas que serão adicionadas
+Lista de colunas é opcional
+Colunas omitidas receberão valores nulos
+
+VALUES
+Valores das colunas
+
+
+exemplo: INSERT INTO Catalogo 
+	VALUES ('Camiseta', 'Jean Paul Gaultier', 'M', 'Branca', 250);

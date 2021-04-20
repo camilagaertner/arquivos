@@ -1,0 +1,4 @@
+DROP TABLE <nome da tabela>;
+
+exemplo:
+DROP TABLE Marca;

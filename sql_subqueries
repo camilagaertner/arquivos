@@ -1,0 +1,61 @@
+------Lista de Comandos SQL---------
+
+
+Para que serve?
+No SELECT 
+Retornar valores no resultados
+
+No FROM ou JOINS 
+Como tabela temporária para retornar dados para a consulta
+
+No WHERE   
+Para filtrar dados baseados no retorno da subquery
+
+Restrições
+⚡ Subqueries na cláusula SELECT só podem retornar uma coluna e uma linha
+⚡ No where a subquery deverá retornar apenas uma linha e coluna se for usada com operadores >,=,<>, >= ou <=
+Isso não vale para o IN ou EXISTS
+
+------------------No SELECT-------------------
+SELECT m.descricao marca, t.descricao AS tipo,
+      tam.descricao AS tamanho, c.descricao cor,
+      (SELECT AVG(preco)
+       FROM Catalogo incat
+       WHERE incat.id_marca = cat.id_marca AND
+             incat.id_tipo =  cat.id_tipo) AS media_preco_por_tipo_e_marca
+   FROM Catalogo cat
+   JOIN Marca m on cat.id_marca = m.id
+   JOIN Tipo AS t on cat.id_tipo = t.id
+   JOIN Tamanho tam on cat.id_tamanho = tam.id
+   JOIN Cor c on cat.id_cor = c.id;
+
+
+---------------No FROM ou JOINS------------------
+SELECT m.descricao marca, t.descricao AS tipo,
+      tam.descricao AS tamanho, c.descricao cor,
+      media_preco AS media_preco_marca,
+      media_estoque AS media_estoque_marca
+   FROM Catalogo cat
+   JOIN Marca m on cat.id_marca = m.id
+   JOIN Tipo AS t on cat.id_tipo = t.id
+   JOIN Tamanho tam on cat.id_tamanho = tam.id
+   JOIN Cor c on cat.id_cor = c.id
+   JOIN (SELECT id_marca, AVG(preco) AS media_preco,
+                SUM(preco) AS soma_preco,
+                AVG(estoque) AS media_estoque,
+                SUM(estoque) AS soma_estoque
+           FROM Catalogo incat
+           GROUP BY id_marca) AS totalizador_marca ON cat.id_marca = totalizador_marca.id_marca;
+           
+           
+----------------------No WHERE------------------------
+SELECT m.descricao marca, t.descricao AS tipo,
+      tam.descricao AS tamanho, c.descricao cor
+   FROM Catalogo cat
+   JOIN Marca m on cat.id_marca = m.id
+   JOIN Tipo AS t on cat.id_tipo = t.id
+   JOIN Tamanho tam on cat.id_tamanho = tam.id
+   JOIN Cor c on cat.id_cor = c.id
+WHERE (SELECT AVG(preco)
+       FROM Catalogo incat
+       WHERE cat.id_marca = incat.id_marca) > 500;

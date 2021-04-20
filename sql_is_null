@@ -1,0 +1,13 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Verificar se o conteúdo de um atributo é nulo
+
+Uso
+Geralmente na cláusula WHERE
+Como retorna 0 ou 1, pode ser usado em outras cláusulas
+
+
+SELECT * FROM Catalogo WHERE preco IS NULL;
+      OU
+SELECT preco IS NULL FROM Catalogo;

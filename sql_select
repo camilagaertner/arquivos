@@ -22,5 +22,4 @@ Ordena as linhas em ordem crescente (ASC, padrão) ou decrescente (DESC) pelas c
 SELECT Tipo, Marca, Cor, Preço
 FROM Catálogo
 WHERE
-      Tamanho NOT IN (‘P’,’M’)
-
+      Tamanho NOT IN (‘P’,’M’);

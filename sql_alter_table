@@ -1,0 +1,19 @@
+------Lista de Comandos SQL---------
+
+
+--------Permite adicionar, remover ou modificar definições de colunas em uma tabela---------
+
+
+Adicionando uma coluna
+ALTER TABLE <nome da tabela> ADD COLUMN <nome da coluna> <tipo da coluna>;
+
+
+
+Exemplo:
+ALTER TABLE Catalogo ADD COLUMN quant INT;
+Adicionando uma coluna não nula
+ALTER TABLE <nome da tabela> ADD COLUMN <nome da coluna> <tipo da coluna> NOT NULL;
+
+
+Exemplo:
+ALTER TABLE Catalogo ADD COLUMN quant INT NOT NULL;

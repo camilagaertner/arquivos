@@ -1,0 +1,31 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Usado em conjunto com a cláusula LIMIT
+Define a posição de início de apresentação dos resultados
+Permite “páginar” os resultados de uma consulta 
+
+
+Uso
+SELECT …
+FROM … 
+JOIN …
+WHERE …
+GROUP BY
+HAVING ...
+ORDER BY …
+LIMIT <número de linhas limite> OFFSET <registro inicial (início em 0)>
+
+
+
+
+SELECT m.descricao marca, t.descricao AS tipo,
+     tam.descricao AS tamanho, c.descricao cor,
+     AVG(preco) OVER(PARTITION BY cat.id_marca, cat.id_tipo) AS media_preco_por_tipo_e_marca,
+     AVG(estoque) OVER(PARTITION BY cat.id_marca, cat.id_tipo) AS media_estoque_por_tipo_e_marca
+  FROM Catalogo cat
+  JOIN Marca m on cat.id_marca = m.id
+  JOIN Tipo AS t on cat.id_tipo = t.id
+  JOIN Tamanho tam on cat.id_tamanho = tam.id
+  JOIN Cor c on cat.id_cor = c.id
+LIMIT 10 OFFSET 10;

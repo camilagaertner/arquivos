@@ -1,0 +1,10 @@
+  ------Lista de Comandos SQL---------
+
+
+-----------Comando CREATE DATABASE-----------
+Comando que cria um novo banco de dados vazio. No exemplo abaixo, vamos criar um banco de dados chamado “exemplos_becode”.
+
+CREATE DATABASE exemplos_becode;
+
+exemplo: 
+CREATE DATABASE catalogo;

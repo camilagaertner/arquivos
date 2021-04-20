@@ -1,0 +1,33 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Limitar a quantidade de linhas retornadas em um resultado
+Nem sempre será possível trazer todas as linhas
+Existem tabelas com milhões de registros
+A transferência de dados será demorada
+O cliente (computador que está buscando os dados) pode não ter capacidade computacional (memória) para trabalhar com uma massa de dados muito grande
+
+
+Uso
+SELECT …
+FROM … 
+JOIN …
+WHERE …
+GROUP BY
+HAVING ...
+ORDER BY …
+LIMIT <número de linhas limite>
+
+
+
+
+SELECT m.descricao marca, t.descricao AS tipo,
+     tam.descricao AS tamanho, c.descricao cor,
+     AVG(preco) OVER(PARTITION BY cat.id_marca, cat.id_tipo) AS media_preco_por_tipo_e_marca,
+     AVG(estoque) OVER(PARTITION BY cat.id_marca, cat.id_tipo) AS media_estoque_por_tipo_e_marca
+  FROM Catalogo cat
+  JOIN Marca m on cat.id_marca = m.id
+  JOIN Tipo AS t on cat.id_tipo = t.id
+  JOIN Tamanho tam on cat.id_tamanho = tam.id
+  JOIN Cor c on cat.id_cor = c.id
+LIMIT 10;

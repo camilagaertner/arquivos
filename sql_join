@@ -1,0 +1,69 @@
+------Lista de Comandos SQL---------
+
+-------Permite fazer a seleção de dados em duas ou mais tabelas-----------
+
+Isto é, a junção (join) de tabelas
+Junção é feita pela comparação de colunas
+
+
+Três tipos principais:
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+
+--------------------INNER JOIN------------------
+
+Resultará nas linhas que estão tanto na tabela da esquerda, quanto na tabela da direita
+É a “intersecção” dos dados entre as duas tabelas
+Forma mais simples de junção
+
+exemplo: 
+SELECT Marca.descricao, Catalogo.preco, Catalogo.estoque     
+    FROM Catalogo, Marca
+    WHERE 
+    	Catalogo.id_marca = Marca.id;
+      
+      
+ exemplo: 
+ SELECT Marca.descricao, Catalogo.preco, Catalogo.estoque 
+	  FROM Catalogo 
+    INNER JOIN Marca ON Catalogo.id = Marca.id;
+    
+    
+--------------------LEFT JOIN------------------
+
+Resultará em todas as linhas que estão na tabela da esquerda e as que também foram encontradas na tabela da direita
+Dados que não existirem na direita serão completados com null
+
+
+SELECT Tamanho.sigla, preco, estoque
+    FROM Tamanho 
+    LEFT JOIN Catalogo ON 
+    	Tamanho.id = Catalogo.id_tamanho;
+
+
+--------------------RIGHT JOIN------------------
+
+Resultará em todas as linhas que estão na tabela da direita e as que também foram encontradas na tabela da esquerda
+Dados que não existirem na esquerda serão completados com null
+
+
+SELECT Catalogo.preco, Catalogo.estoque, Cor.descricao
+	FROM Catalogo 
+    RIGHT JOIN Cor ON 
+    	Catalogo.id_cor = Cor.id;
+
+
+------------------------JOIN---------------------------
+
+
+SELECT Marca.descricao, Tipo.descricao, Cor.descricao, Tamanho.sigla
+    FROM Catalogo 
+    INNER JOIN Marca ON 
+    	Catalogo.id_marca = Marca.id
+    INNER JOIN Tipo ON 
+    	Catalogo.id_tipo = Tipo.id
+    INNER JOIN Tamanho ON 
+    	Catalogo.id_tamanho = Tamanho.id
+    INNER JOIN Cor ON 
+    	Catalogo.id_cor = Cor.id;

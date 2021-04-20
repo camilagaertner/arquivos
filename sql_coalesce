@@ -1,0 +1,20 @@
+------Lista de Comandos SQL---------
+
+
+Função
+Retorna o primeiro valor não nulo de uma lista de valores
+Útil para adicionar valores padrões quando lidamos com valores nulos
+
+Exemplo:
+SELECT COALESCE(null, null, 'Hello COALESCE', null);
+Retorna uma linha contendo a string ‘Hello Coalesce’
+
+
+
+exemplo: 
+SELECT DISTINCT cor.descricao  AS cor,
+               COALESCE(t.descricao, 'Inexistente') AS tipo
+FROM Catalogo c
+        JOIN Tipo t ON c.id_tipo = t.id
+        RIGHT JOIN Cor cor ON c.id_cor = cor.id
+ORDER BY tipo, cor;

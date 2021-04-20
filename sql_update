@@ -1,0 +1,24 @@
+------Lista de Comandos SQL---------
+
+
+-------------Modifica dados em uma relação----------
+
+UPDATE
+Nome da tabela que será modificada
+
+SET
+Define os atributos que serão modificados
+
+WHERE
+Mapeia as linhas atualizadas de acordo com as características dos atributos
+Lógica
+IN, BETWEEN, <, <=, >, >=, =, <>, AND, OR, LIKE
+
+
+exemplo: 
+UPDATE Catalogo 
+	SET Cor = 'Azul', Tipo = 'Polo' 
+	WHERE 
+		Marca = 'Lacoste' 
+			AND Tamanho = 'M' 
+			AND Preco = 120;

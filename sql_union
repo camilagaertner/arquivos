@@ -1,0 +1,23 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Unificar várias consultas em um único resultado
+
+Restrições
+Cada consulta deve possuir o mesmo número de colunas
+Enésima coluna da consulta 1 deve ser do mesmo tipo da consulta 2, e da consulta 3, etc
+Isto é, a primeira coluna de todas as consultas deve ser do mesmo tipo
+A segunda coluna de todas as consultas deve ter o mesmo tipo
+A coluna N de todas as consultas deve ter o mesmo tipo
+
+Valores resultantes são distintos
+Isto é, não existirão tuplas (linhas) repetidas
+
+exemplo:
+SELECT 'Marca', descricao FROM Marca
+UNION
+SELECT 'Tipo', descricao FROM Tipo
+UNION
+SELECT 'Tamanho', descricao FROM Tamanho
+UNION
+SELECT 'Cor', descricao FROM Cor;

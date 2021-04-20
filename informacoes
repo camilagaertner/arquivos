@@ -1,0 +1,273 @@
+TRUNCATE TABLE Catalogo;
+ALTER TABLE Catalogo ADD COLUMN estoque INT NOT NULL;
+
+DELETE FROM Cor WHERE hexa = '00FF00';
+INSERT INTO Cor (hexa, descricao) VALUES ('00FF00', 'Verde');
+
+DELETE FROM Tamanho WHERE sigla = 'GG';
+INSERT INTO Tamanho (sigla, descricao) VALUES ('GG', 'Extra grande');
+
+-- Insere itens da marca Jean Paul Gaultier
+-- Tamanho: Médio
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,1,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,1,2,500,30); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,1,3,750,20); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,1,4,300,50); -- Polo
+-- Cor   : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,2,1,250,30); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,2,2,500,23); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,2,3,750,40); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,2,4,300,50); -- Polo
+-- Cor   : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,3,1,250,15); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,3,2,500,19); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,3,3,750,20); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,3,4,300,30); -- Polo
+-- Cor   : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,4,1,250,30); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,4,2,500,25); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,4,3,750,13); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,1,4,4,300,31); -- Polo
+
+-- Tamanho: Pequeno
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,1,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,1,2,500,31); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,1,3,750,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,1,4,300,10); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,2,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,2,2,500,19); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,2,3,750,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,2,4,300,31); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,3,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,3,2,500,13); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,3,3,750,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,3,4,300,10); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,4,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,4,2,500,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,4,3,750,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,2,4,4,300,31); -- Polo
+
+
+-- Tamanho: Grande
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,1,1,250,50); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,1,2,500,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,1,3,750,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,1,4,300,31); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,2,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,2,2,500,19); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,2,3,750,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,2,4,300,10); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,3,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,3,2,500,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,3,3,750,19); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,3,4,300,31); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,4,1,250,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,4,2,500,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,4,3,750,13); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (1,3,4,4,300,10); -- Polo
+
+
+-- Insere itens da marca Yves Saint Lorraine
+-- Tamanho: Médio
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,1,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,1,2,1250,50); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,1,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,1,4,250,19); -- Polo
+-- Cor   : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,2,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,2,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,2,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,2,4,250,31); -- Polo
+-- Cor   : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,3,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,3,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,3,3,900,19); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,3,4,250,10); -- Polo
+-- Cor   : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,4,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,4,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,4,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,1,4,4,250,31); -- Polo
+
+-- Tamanho: Pequeno
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,1,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,1,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,1,3,900,50); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,1,4,250,10); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,2,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,2,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,2,3,900,19); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,2,4,250,31); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,3,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,3,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,3,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,3,4,250,19); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,4,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,4,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,4,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,2,4,4,250,50); -- Polo
+
+
+-- Tamanho: Grande
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,1,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,1,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,1,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,1,4,250,31); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,2,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,2,2,1250,50); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,2,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,2,4,250,10); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,3,1,500,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,3,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,3,3,900,31); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,3,4,250,19); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,4,1,500,13); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,4,2,1250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,4,3,900,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (2,3,4,4,250,19); -- Polo
+
+-- Insere itens da marca Louis Vuitton
+-- Tamanho: Médio
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,1,1,400,31); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,1,2,970,19); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,1,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,1,4,150,10); -- Polo
+-- Cor   : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,2,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,2,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,2,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,2,4,150,13); -- Polo
+-- Cor   : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,3,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,3,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,3,3,680,19); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,3,4,150,10); -- Polo
+-- Cor   : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,4,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,4,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,4,3,680,50); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,1,4,4,150,31); -- Polo
+
+-- Tamanho: Pequeno
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,1,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,1,2,970,50); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,1,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,1,4,150,31); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,2,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,2,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,2,3,680,19); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,2,4,150,10); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,3,1,400,13); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,3,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,3,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,3,4,150,10); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,4,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,4,2,970,31); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,4,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,2,4,4,150,50); -- Polo
+
+
+-- Tamanho: Grande
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,1,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,1,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,1,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,1,4,150,19); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,2,1,400,13); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,2,2,970,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,2,3,680,31); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,2,4,150,10); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,3,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,3,2,970,19); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,3,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,3,4,150,50); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,4,1,400,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,4,2,970,19); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,4,3,680,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (3,3,4,4,150,10); -- Polo
+
+-- Insere itens da marca Lacoste
+-- Tamanho: Médio
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,1,1,100,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,1,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,1,3,250,31); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,1,4,100,10); -- Polo
+-- Cor   : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,2,1,100,19); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,2,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,2,3,250,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,2,4,100,50); -- Polo
+-- Cor   : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,3,1,100,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,3,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,3,3,250,31); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,3,4,100,10); -- Polo
+-- Cor   : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,4,1,100,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,4,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,4,3,250,31); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,1,4,4,100,10); -- Polo
+
+-- Tamanho: Pequeno
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,1,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,1,3,250,13); -- Calça
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,2,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,2,3,250,31); -- Calça
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,3,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,3,3,250,31); -- Calça
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,4,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,2,4,3,250,10); -- Calça
+
+
+-- Tamanho: Grande
+-- Cor    : Branca
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,1,1,100,50); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,1,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,1,3,250,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,1,4,100,19); -- Polo
+-- Cor    : Azul
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,2,1,100,13); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,2,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,2,3,250,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,2,4,100,31); -- Polo
+-- Cor    : Preta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,3,1,100,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,3,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,3,3,250,50); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,3,4,100,10); -- Polo
+-- Cor    : Vermelha
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,4,1,100,10); -- Camiseta
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,4,2,250,10); -- Vestido
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,4,3,250,10); -- Calça
+INSERT INTO Catalogo(id_marca, id_tamanho, id_cor, id_tipo, preco, estoque) VALUES (4,3,4,4,100,19); -- Polo

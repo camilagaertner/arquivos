@@ -1,0 +1,20 @@
+------Lista de Comandos SQL---------
+
+
+--------------Remove linhas de uma relação--------
+
+DELETE
+
+FROM
+Nome da tabela de onde os dados serão removidos
+
+WHERE
+Mapeia as linhas removidas de acordo com as características dos atributos
+Lógica
+IN, BETWEEN, <, <=, >, >=, =, <>, AND, OR, LIKE
+
+exemplo:
+DELETE 
+	FROM Catalogo 
+	WHERE 
+		Marca = 'Lacoste' AND Preco >= 500

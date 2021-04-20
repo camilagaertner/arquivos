@@ -8,12 +8,31 @@ Adicionando uma coluna
 ALTER TABLE <nome da tabela> ADD COLUMN <nome da coluna> <tipo da coluna>;
 
 
-
 Exemplo:
 ALTER TABLE Catalogo ADD COLUMN quant INT;
 Adicionando uma coluna não nula
 ALTER TABLE <nome da tabela> ADD COLUMN <nome da coluna> <tipo da coluna> NOT NULL;
 
-
 Exemplo:
 ALTER TABLE Catalogo ADD COLUMN quant INT NOT NULL;
+
+
+
+-------------Alterando e renomeando uma coluna--------
+
+ALTER TABLE <nome da tabela> CHANGE COLUMN <nome da coluna existente> <nome da nova coluna> <tipo da coluna>;
+
+Exemplo:
+ALTER TABLE Catalogo CHANGE COLUMN quant quantidade INT;
+Alterando e renomeando para uma coluna não nula
+ALTER TABLE <nome da tabela> CHANGE COLUMN <nome da coluna existente> <nome da nova coluna> <tipo da coluna> NOT NULL;
+
+Exemplo:
+ALTER TABLE Catalogo CHANGE COLUMN quant quantidade INT NOT NULL;
+
+
+-----------------Removendo uma coluna-----------------
+ALTER TABLE <nome da tabela> DROP COLUMN <nome da coluna>;
+
+Exemplo:
+ALTER TABLE Catalogo DROP COLUMN quantidade;

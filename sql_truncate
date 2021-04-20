@@ -1,0 +1,13 @@
+------Lista de Comandos SQL---------
+
+-------------Truncate é utilizado para excluir todos os dados de uma tabela-------
+
+Similar ao comando DELETE com a cláusula WHERE omitida
+Porém o desempenho é maior
+
+☢️ Use com muito cuidado!!!
+⚠️ Não executará caso a tabela exportar chaves estrangeiras para outras tabelas
+
+
+Exemplo:
+TRUNCATE TABLE Catalogo;

@@ -1,0 +1,22 @@
+------Lista de Comandos SQL---------
+
+Para que serve?
+Apelidar nome de colunas, tabelas e subselects
+Útil para referenciar tabelas e subselects em cláusulas JOIN
+Útil para referenciar tabelas externas a um subselect
+Útil para definir nome de colunas 
+Na exibição dos resultados
+Ao exportar resultados em CSV
+Para referenciar  ao usar um subselect na cláusula FROM
+
+
+
+exemplo: 
+SELECT m.descricao marca, t.descricao AS tipo,
+      tam.descricao AS tamanho, c.descricao cor,
+      'Item' AS texto
+   FROM Catalogo cat
+   JOIN Marca m on cat.id_marca = m.id
+   JOIN Tipo AS t on cat.id_tipo = t.id
+   JOIN Tamanho tam on cat.id_tamanho = tam.id
+   JOIN Cor c on cat.id_cor = c.id;

@@ -1,0 +1,63 @@
+  ------Lista de Comandos SQL---------
+
+
+
+----------------------COUNT------------------
+
+Efetua a contagem dos valores não nulos de um atributo dos dados selecionados
+Exemplo:
+SELECT COUNT(Catalogo.id)
+FROM  Cor 
+LEFT JOIN Catalogo ON Cor.id = Catalogo.id_cor; 
+
+Resultará em 4
+
+
+----------------------SUM---------------
+
+Efetua a soma dos valores não nulos de um atributo dos dados selecionados
+Exemplo:
+SELECT SUM(Catalogo.preco) 
+FROM  Cor 
+LEFT JOIN Catalogo ON Cor.id = Catalogo.id_cor; 
+
+Resultado 380
+
+----------------------AVG----------------
+
+Efetua a média dos valores não nulos  de um atributo dos dados selecionados
+Exemplo:
+SELECT AVG(Catalogo.preco) 
+FROM  Cor 
+LEFT JOIN Catalogo ON Cor.id = Catalogo.id_cor; 
+Resultado 380
+
+----------------------MIN----------------
+Retorna o menor valor não nulo de um atributo dos dados selecionados
+Exemplo:
+SELECT MIN(Catalogo.preco) 
+FROM  Cor 
+LEFT JOIN Catalogo ON Cor.id = Catalogo.id_cor; 
+Resultado 120
+
+
+----------------------MAX----------------
+Retorna o maior valor não nulo de um atributo dos dados selecionados
+Exemplo:
+SELECT MAX(Catalogo.preco) 
+FROM  Cor 
+LEFT JOIN Catalogo ON Cor.id = Catalogo.id_cor; 
+Resultado 750
+
+------------------------GROUP BY------------------------
+É possível retornar mais de uma linha ao usar operações de agregações
+Isto é feito através do agrupamento de colunas com a cláusula GROUP BY
+
+Exemplo: 
+SELECT
+	Tamanho.sigla, SUM(Catalogo.preco), AVG(Catalogo.preco),
+         MAX(Catalogo.preco), MIN(Catalogo.preco), COUNT(Catalogo.id)
+FROM
+         Catalogo INNER JOIN Tamanho ON Catalogo.id_tamanho = Tamanho.id  
+GROUP BY 
+	Tamanho.sigla;
